@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pratham Pachapur | Mechatronics, IoT & Robotics</title>
+<meta name="description" content="Mechatronics student at NMIMS MPSTME building robots, IoT systems and product designs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { darkMode: 'class', theme: { extend: {
+  fontFamily: { sans: ['Inter','system-ui','sans-serif'], head: ['Space Grotesk','Inter','sans-serif'] },
+  colors: { accent: '#3b82f6' } } } };
+</script>
+<style>
+  body { background-image: radial-gradient(rgba(59,130,246,.12) 1px, transparent 1px); background-size: 28px 28px; }
+  .reveal { opacity: 0; transform: translateY(16px); transition: all .6s ease; }
+  .reveal.show { opacity: 1; transform: none; }
+  .glow { box-shadow: 0 0 60px -10px rgba(59,130,246,.55); }
+</style>
+</head>
+<body class="font-sans bg-slate-50 text-slate-700 dark:bg-slate-950 dark:text-slate-300 antialiased">
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50 backdrop-blur bg-white/70 dark:bg-slate-950/70 border-b border-slate-200 dark:border-slate-800">
+  <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+    <a href="#home" class="font-head font-bold text-lg text-slate-900 dark:text-white">Pratham<span class="text-accent">.</span>P</a>
+    <ul id="links" class="hidden md:flex items-center gap-7 text-sm font-medium"></ul>
+    <div class="flex items-center gap-2">
+      <button id="theme" aria-label="Toggle theme" class="p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>
+      </button>
+      <a href="#" id="resume" download class="hidden sm:inline-block px-4 py-2 rounded-lg bg-accent text-white text-sm font-semibold hover:bg-blue-600">Resume</a>
+      <button id="burger" aria-label="Menu" class="md:hidden p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </nav>
+  <ul id="mobile" class="hidden md:hidden px-5 pb-4 space-y-3 text-sm font-medium"></ul>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="home" class="pt-32 pb-20 px-5">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div class="order-2 md:order-1 reveal">
+      <p class="text-accent font-semibold tracking-widest text-xs uppercase mb-4">Mechatronics · IoT · Robotics</p>
+      <h1 class="font-head font-bold text-4xl sm:text-5xl lg:text-6xl text-slate-900 dark:text-white leading-tight">Pratham <span class="text-accent">Pachapur</span></h1>
+      <p class="mt-5 text-lg text-slate-600 dark:text-slate-400">Mechatronics Engineering student at SVKM's NMIMS MPSTME. IoT &amp; Robotics, CAD &amp; Product Design, and an aviation enthusiast.</p>
+      <p class="mt-3 italic text-slate-500">"Building ideas. Automating solutions. Elevating tomorrow."</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#contact" class="px-6 py-3 rounded-lg bg-accent text-white font-semibold hover:bg-blue-600">Get in Touch</a>
+        <a href="#projects" class="px-6 py-3 rounded-lg border border-slate-300 dark:border-slate-700 font-semibold hover:border-accent hover:text-accent">View Projects</a>
+      </div>
+    </div>
+    <div class="order-1 md:order-2 flex justify-center reveal">
+      <div class="relative">
+        <div class="absolute -inset-3 rounded-[2rem] border-2 border-accent/40 rotate-3"></div>
+        <!-- Replace src with your photo, e.g. "photo.jpg" -->
+        <img id="photo" alt="Pratham Pachapur" src="" class="relative w-64 h-72 sm:w-72 sm:h-80 object-cover rounded-[2rem] glow bg-slate-200 dark:bg-slate-800" onerror="this.style.visibility='hidden'">
+        <div class="absolute inset-0 -z-0 flex items-center justify-center font-head text-6xl font-bold text-accent/50">PP</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-20 px-5">
+  <div class="max-w-4xl mx-auto reveal">
+    <h2 class="font-head text-3xl font-bold text-slate-900 dark:text-white mb-2">About</h2>
+    <div class="h-1 w-12 bg-accent rounded mb-8"></div>
+    <div class="space-y-5 text-lg leading-relaxed">
+      <p>I'm a Mechatronics, Robotics &amp; Automation Engineering student at NMIMS MPSTME, drawn to robotics, IoT and automation. I like building things, solving problems, and turning engineering into practical, real-world solutions.</p>
+      <p>Alongside academics, I contribute to technical, research, design and marketing initiatives across college, and I'm sharpening my skills in CAD, programming, robotics, video editing and product design.</p>
+      <p class="font-semibold text-slate-900 dark:text-white">Always learning. Always building. Always looking for the next problem to solve.</p>
+    </div>
+    <div id="stats" class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4"></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="py-20 px-5 bg-slate-100/70 dark:bg-slate-900/40">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="font-head text-3xl font-bold text-slate-900 dark:text-white mb-2">Experience &amp; Education</h2>
+    <div class="h-1 w-12 bg-accent rounded mb-10"></div>
+    <div class="grid md:grid-cols-2 gap-12">
+      <div><h3 class="font-semibold text-accent mb-5">Experience</h3><ol id="exp" class="relative border-l border-slate-300 dark:border-slate-700 ml-2 space-y-8"></ol></div>
+      <div><h3 class="font-semibold text-accent mb-5">Education</h3><ol id="edu" class="relative border-l border-slate-300 dark:border-slate-700 ml-2 space-y-8"></ol></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-20 px-5">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="font-head text-3xl font-bold text-slate-900 dark:text-white mb-2">Projects</h2>
+    <div class="h-1 w-12 bg-accent rounded mb-10"></div>
+    <div id="proj" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-20 px-5 bg-slate-100/70 dark:bg-slate-900/40">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="font-head text-3xl font-bold text-slate-900 dark:text-white mb-2">Skills</h2>
+    <div class="h-1 w-12 bg-accent rounded mb-10"></div>
+    <div id="skill" class="grid md:grid-cols-2 gap-6"></div>
+    <h3 class="font-semibold text-accent mt-12 mb-4">Certifications</h3>
+    <div id="cert" class="grid sm:grid-cols-2 gap-4"></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20 px-5">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="font-head text-3xl font-bold text-slate-900 dark:text-white mb-2">Contact</h2>
+    <div class="h-1 w-12 bg-accent rounded mb-10"></div>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div>
+        <p class="text-lg mb-6">Have a project, internship or idea in mind? Let's talk.</p>
+        <div id="social" class="flex gap-3"></div>
+      </div>
+      <div class="space-y-4">
+        <input id="fn" placeholder="Your name" class="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 focus:outline-none focus:border-accent">
+        <input id="fe" type="email" placeholder="Your email" class="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 focus:outline-none focus:border-accent">
+        <textarea id="fm" rows="4" placeholder="Message" class="w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 focus:outline-none focus:border-accent"></textarea>
+        <button id="send" class="w-full px-6 py-3 rounded-lg bg-accent text-white font-semibold hover:bg-blue-600">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="py-8 text-center text-sm text-slate-500 border-t border-slate-200 dark:border-slate-800">© <span id="yr"></span> Pratham Pachapur · Mumbai, India</footer>
+
+<script>
+/* ===== EDIT YOUR CONTENT HERE ===== */
+const D = {
+  email: "your.email@example.com",          // TODO
+  linkedin: "https://www.linkedin.com/in/your-handle", // TODO
+  github: "https://github.com/your-handle", // TODO
+  resume: "#",                              // TODO: path to your resume PDF
+  photo: "",                                // TODO: e.g. "photo.jpg"
+  stats: [["4","Active roles"],["3+","Projects"],["22","Skills"],["2030","B.Tech grad"]],
+  exp: [
+    ["Tech & Research Executive","4C – The Marketing Cell of NMIMS","Aug 2026 – Present",["Research and tech work for the marketing cell","Uses C, C++ and Python"]],
+    ["IoT / Robotics Executive","Google Developer Group on Campus, NMIMS MPSTME","Aug 2026 – Present",["IoT and robotics initiatives on campus","CAD and Onshape design work"]],
+    ["Design Executive","Technotix MPSTME","Aug 2026 – Present",["Mechanical design in Onshape and AutoCAD"]],
+    ["SMCW Executive","IET MPSTME On Campus","Aug 2026 – Present",["Video editing in DaVinci Resolve","Photoshop and social media content creation"]]
+  ],
+  edu: [
+    ["B.Tech, Mechatronics, Robotics & Automation Engineering","SVKM's NMIMS Mukesh Patel School of Technology Management & Engineering","Jul 2026 – 2030",[]],
+    ["Vani Vidyalaya High School and Jr. College","SSC Class X · 90.4%","2018 – 2024",[]]
+  ],
+  projects: [
+    ["Obstacle Avoidance Autonomous Robot","Arduino-based robot using an L298N motor driver to detect and steer around obstacles.",["Arduino","L298N","C++","Robotics"]],
+    ["4WD Autonomous Soccer Robot","Four-wheel-drive college robot with Raspberry Pi 3, Arduino Uno, 12V motors and servo arms.",["Raspberry Pi","Arduino","Servos"]],
+    ["Builder Robot (Robocon 2027)","Stair-climbing mechanism design for the autonomous Builder Robot with Team Technotix.",["CAD","Onshape","Mechanism design"]]
+  ],
+  skills: {
+    "Robotics & Embedded": ["Robotics","Arduino","Microcontrollers","Internet of Things (IoT)","Artificial Intelligence"],
+    "Design & Media": ["CAD","AutoCAD","Onshape","Adobe Photoshop","DaVinci Resolve","Video Editing","Social Media Content Creation"],
+    "Programming": ["C","C++","Python"],
+    "AI & Productivity": ["Google Workspace","Google Gemini","Prompt Engineering","AI Literacy","AI Integrations","Technology Roadmaps"]
+  },
+  certs: [["Maximize Productivity With AI Tools","Google · Oct 2026"],["Introduction to AI","Google · Sep 2026"]]
+};
+/* ================================== */
+
+const $ = s => document.querySelector(s);
+const nav = ["Home","About","Experience","Projects","Skills","Contact"];
+const ico = {
+  in:'<path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 110-4.2 2.1 2.1 0 010 4.2zM7.1 20.5H3.6V9h3.5v11.5z"/>',
+  gh:'<path d="M12 .5a11.5 11.5 0 00-3.6 22.4c.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 015.8 0c2.2-1.5 3.200-1.200 3.200-1.200.6 1.600.2 2.800.1 3.100.8.8 1.200 1.800 1.200 3.100 0 4.400-2.700 5.400-5.300 5.700.4.4.8 1.100.8 2.200v3.200c0 .4.2.7.8.6A11.500 11.500 0 0012 .5z"/>',
+  mail:'<path d="M2 5.5A1.500 1.500 0 013.500 4h17A1.500 1.500 0 0122 5.500v13a1.500 1.500 0 01-1.500 1.500h-17A1.500 1.500 0 012 18.500v-13zm2.200.5L12 11.800 19.800 6H4.200z"/>'
+};
+const svg = p => `<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">${p}</svg>`;
+
+// nav
+const li = nav.map(n => `<li><a href="#${n.toLowerCase()}" class="hover:text-accent">${n}</a></li>`).join("");
+$("#links").innerHTML = li; $("#mobile").innerHTML = li + `<li><a href="${D.resume}" download class="text-accent">Resume</a></li>`;
+$("#burger").onclick = () => $("#mobile").classList.toggle("hidden");
+$("#mobile").onclick = e => { if (e.target.tagName === "A") $("#mobile").classList.add("hidden"); };
+$("#resume").href = D.resume;
+if (D.photo) $("#photo").src = D.photo;
+
+// theme
+const root = document.documentElement;
+try { if (localStorage.getItem("theme") === "light") root.classList.remove("dark"); } catch (e) {}
+$("#theme").onclick = () => {
+  root.classList.toggle("dark");
+  try { localStorage.setItem("theme", root.classList.contains("dark") ? "dark" : "light"); } catch (e) {}
+};
+
+// stats
+$("#stats").innerHTML = D.stats.map(([n,l]) => `<div class="rounded-xl border border-slate-200 dark:border-slate-800 p-4 text-center"><div class="font-head text-2xl font-bold text-accent">${n}</div><div class="text-xs mt-1 text-slate-500">${l}</div></div>`).join("");
+
+// timelines
+const tl = rows => rows.map(([t,o,d,b]) => `<li class="ml-6 reveal"><span class="absolute -left-[7px] mt-1.5 w-3 h-3 rounded-full bg-accent ring-4 ring-slate-100 dark:ring-slate-900"></span>
+  <p class="text-xs text-accent font-medium">${d}</p><h4 class="font-semibold text-slate-900 dark:text-white">${t}</h4><p class="text-sm text-slate-500">${o}</p>
+  ${b.length ? `<ul class="mt-2 text-sm list-disc ml-4 space-y-1">${b.map(x => `<li>${x}</li>`).join("")}</ul>` : ""}</li>`).join("");
+$("#exp").innerHTML = tl(D.exp); $("#edu").innerHTML = tl(D.edu);
+
+// projects
+$("#proj").innerHTML = D.projects.map(([t,d,tags]) => `<article class="reveal rounded-2xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-accent hover:-translate-y-1 transition">
+  <h3 class="font-head font-bold text-lg text-slate-900 dark:text-white">${t}</h3><p class="mt-2 text-sm">${d}</p>
+  <div class="mt-4 flex flex-wrap gap-2">${tags.map(x => `<span class="text-xs px-2.5 py-1 rounded-full bg-accent/10 text-accent">${x}</span>`).join("")}</div></article>`).join("");
+
+// skills + certs
+$("#skill").innerHTML = Object.entries(D.skills).map(([k,v]) => `<div class="reveal rounded-2xl p-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+  <h3 class="font-semibold text-slate-900 dark:text-white mb-4">${k}</h3><div class="flex flex-wrap gap-2">${v.map(x => `<span class="text-sm px-3 py-1 rounded-full border border-slate-300 dark:border-slate-700">${x}</span>`).join("")}</div></div>`).join("");
+$("#cert").innerHTML = D.certs.map(([t,s]) => `<div class="rounded-xl p-4 border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900"><p class="font-semibold text-slate-900 dark:text-white">${t}</p><p class="text-sm text-slate-500">${s}</p></div>`).join("");
+
+// contact
+$("#social").innerHTML = [["LinkedIn",D.linkedin,ico.in],["GitHub",D.github,ico.gh],["Email","mailto:"+D.email,ico.mail]].map(([n,h,p]) =>
+  `<a href="${h}" target="_blank" rel="noopener" aria-label="${n}" class="p-3 rounded-lg border border-slate-300 dark:border-slate-700 hover:border-accent hover:text-accent">${svg(p)}</a>`).join("");
+$("#send").onclick = () => {
+  const b = `${$("#fm").value}\n\n— ${$("#fn").value} (${$("#fe").value})`;
+  location.href = `mailto:${D.email}?subject=${encodeURIComponent("Portfolio enquiry from " + $("#fn").value)}&body=${encodeURIComponent(b)}`;
+};
+$("#yr").textContent = new Date().getFullYear();
+
+// reveal on scroll
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("show"); io.unobserve(e.target); } }), { threshold: .1 });
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+</script>
+</body>
+</html>
