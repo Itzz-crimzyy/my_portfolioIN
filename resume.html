@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pratham Pachapur — Resume Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #0284c7;
+    --primary-dark: #0369a1;
+    --text-dark: #0f172a;
+    --text-muted: #475569;
+    --text-light: #64748b;
+    --border: #e2e8f0;
+    --bg-sidebar: #f8fafc;
+    --badge-bg: #e0f2fe;
+    --badge-text: #0369a1;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #e2e8f0;
+    color: var(--text-dark);
+    line-height: 1.45;
+    padding: 30px 15px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  header {
+    background: #0b1220;
+    color: #ffffff;
+    padding: 26px 36px 22px;
+    border-bottom: 3px solid var(--primary);
+  }
+  .header-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .header-name span { color: #38bdf8; }
+  .header-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    color: #94a3b8;
+    margin-top: 4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .header-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 18px;
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    font-size: 11px;
+    color: #cbd5e1;
+  }
+  .header-contacts a {
+    color: #38bdf8;
+    text-decoration: none;
+    transition: color .2s;
+  }
+  .header-contacts a:hover { text-decoration: underline; }
+  .main-container {
+    display: flex;
+    flex: 1;
+  }
+  aside {
+    width: 32%;
+    background: var(--bg-sidebar);
+    padding: 22px 20px;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  main {
+    width: 68%;
+    padding: 22px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--primary-dark);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-bottom: 1.5px solid var(--border);
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .section-title::before {
+    content: '//';
+    color: var(--primary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+  }
+  /* Profile statement */
+  .profile-text {
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--text-muted);
+    text-align: justify;
+  }
+  /* Projects */
+  .item {
+    margin-bottom: 13px;
+  }
+  .item:last-child { margin-bottom: 0; }
+  .item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .item-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+  .item-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--text-light);
+    white-space: nowrap;
+  }
+  .item-sub {
+    font-size: 10.5px;
+    color: var(--primary-dark);
+    font-weight: 500;
+    margin-top: 1px;
+  }
+  .tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 4px 0 6px;
+  }
+  .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    font-weight: 600;
+    background: var(--badge-bg);
+    color: var(--badge-text);
+    padding: 1.5px 6px;
+    border-radius: 4px;
+  }
+  .bullets {
+    list-style: none;
+    margin-top: 4px;
+  }
+  .bullets li {
+    font-size: 10.5px;
+    line-height: 1.45;
+    color: var(--text-muted);
+    position: relative;
+    padding-left: 14px;
+    margin-bottom: 3.5px;
+  }
+  .bullets li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-size: 10px;
+  }
+  /* Sidebar items */
+  .skill-group {
+    margin-bottom: 10px;
+  }
+  .skill-group:last-child { margin-bottom: 0; }
+  .skill-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 3px;
+  }
+  .skill-list {
+    font-size: 10px;
+    color: var(--text-muted);
+    line-height: 1.45;
+  }
+  .cert-item {
+    margin-bottom: 7px;
+  }
+  .cert-item:last-child { margin-bottom: 0; }
+  .cert-name {
+    font-size: 10.5px;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+  .cert-meta {
+    font-size: 9.5px;
+    color: var(--text-light);
+  }
+  .lang-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 8px;
+    font-size: 10px;
+  }
+  .lang-name { font-weight: 600; color: var(--text-dark); }
+  .lang-level { color: var(--text-light); font-size: 9px; }
+
+  /* Print Controls */
+  .action-bar {
+    max-width: 210mm;
+    margin: 0 auto 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  }
+  .btn {
+    background: #0284c7;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .btn:hover { background: #0369a1; }
+  .status-badge {
+    font-size: 12px;
+    color: #475569;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .action-bar { display: none; }
+    .page {
+      box-shadow: none;
+      margin: 0;
+      width: 100%;
+      min-height: 100vh;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="action-bar">
+  <div>
+    <strong>Pratham Pachapur — Resume Preview</strong>
+    <div class="status-badge">// Updated with SWARM-SAR 12-DOF Quadruped & Refined Bullets</div>
+  </div>
+  <button class="btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+</div>
+
+<div class="page">
+  <header>
+    <div class="header-name">Pratham <span>Pachapur</span></div>
+    <div class="header-title">Mechatronics Engineering &middot; 12-DOF Robotics &middot; IoT &middot; CAD Design</div>
+    <div class="header-contacts">
+      <span>📍 Mumbai, India</span>
+      <span>✉️ <a href="mailto:prathampiitm0409@gmail.com">prathampiitm0409@gmail.com</a></span>
+      <span>🎓 <a href="mailto:pratham.pachapur12@nmims.in">pratham.pachapur12@nmims.in</a></span>
+      <span>🔗 <a href="https://linkedin.com/in/pratham-pachapur-crimzyy" target="_blank">linkedin.com/in/pratham-pachapur-crimzyy</a></span>
+      <span>💻 <a href="https://github.com/Itzz-crimzyy" target="_blank">github.com/Itzz-crimzyy</a></span>
+      <span>🌐 <a href="https://myportfoliocrimzyy.vercel.app" target="_blank">myportfoliocrimzyy.vercel.app</a></span>
+    </div>
+  </header>
+
+  <div class="main-container">
+    <!-- LEFT ASIDE -->
+    <aside>
+      <div>
+        <div class="section-title">Technical Skills</div>
+        <div class="skill-group">
+          <div class="skill-label">Robotics &amp; Embedded</div>
+          <div class="skill-list">12-DOF Quadruped, Inverse Kinematics, Arduino, ESP32, Raspberry Pi 3, Microcontrollers, Servo Shields, DC Motor Drivers (L298N)</div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-label">Programming</div>
+          <div class="skill-list">C, C++, Python, Embedded C++, HTML/CSS, JavaScript (Gamepad API), Git/GitHub</div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-label">CAD &amp; Mechanism Design</div>
+          <div class="skill-list">AutoCAD, Onshape, Autodesk Fusion, 3D Printing (FDM), Mechanism &amp; Linkage Modeling</div>
+        </div>
+        <div class="skill-group">
+          <div class="skill-label">AI &amp; Productivity</div>
+          <div class="skill-list">Agentic AI Workflows, Prompt Engineering, Google Gemini, DaVinci Resolve, Photoshop</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-title">Education</div>
+        <div class="item">
+          <div class="item-title" style="font-size:11px;">B.Tech &mdash; Mechatronics, Robotics &amp; Automation</div>
+          <div class="item-sub">NMIMS MPSTME, Mumbai</div>
+          <div class="item-date">2026 &ndash; 2030</div>
+        </div>
+        <div class="item">
+          <div class="item-title" style="font-size:11px;">HSC Science (Class XII)</div>
+          <div class="item-sub">Jai Bharat Jr. College &middot; 80.00%</div>
+          <div class="item-date">2024 &ndash; 2026</div>
+        </div>
+        <div class="item">
+          <div class="item-title" style="font-size:11px;">SSC (Class X)</div>
+          <div class="item-sub">Vani Vidyalaya &middot; 90.40%</div>
+          <div class="item-date">2018 &ndash; 2024</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-title">Certifications</div>
+        <div class="cert-item">
+          <div class="cert-name">Google AI Essentials Specialization</div>
+          <div class="cert-meta">Google / Coursera &middot; Oct 2026</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-name">Maximize Productivity with AI</div>
+          <div class="cert-meta">Google / Coursera &middot; Oct 2026</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-name">Discover the Art of Prompting</div>
+          <div class="cert-meta">Google / Coursera &middot; Oct 2026</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-name">Introduction to AI</div>
+          <div class="cert-meta">Google / Coursera &middot; Sep 2026</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-title">Languages</div>
+        <div class="lang-grid">
+          <div><div class="lang-name">English</div><div class="lang-level">Professional</div></div>
+          <div><div class="lang-name">Kannada</div><div class="lang-level">Native</div></div>
+          <div><div class="lang-name">Hindi</div><div class="lang-level">Near-Native</div></div>
+          <div><div class="lang-name">Marathi</div><div class="lang-level">Near-Native</div></div>
+          <div><div class="lang-name">Gujarati</div><div class="lang-level">Conversational</div></div>
+          <div><div class="lang-name">German</div><div class="lang-level">Elementary</div></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- RIGHT MAIN CONTENT -->
+    <main>
+      <!-- PROFILE -->
+      <div>
+        <div class="section-title">Profile</div>
+        <p class="profile-text">
+          First-year Mechatronics, Robotics &amp; Automation student at NMIMS MPSTME with hands-on expertise in biomimetic quadruped robotics, analytical inverse kinematics, and embedded telemetry. Proven track record co-leading multi-disciplinary builds (12-DOF SpideyBot) and CAD mechanism design for ABU Robocon 2027. Actively seeking a Robotics or IoT engineering internship.
+        </p>
+      </div>
+
+      <!-- FEATURED PROJECTS -->
+      <div>
+        <div class="section-title">Featured Robotics &amp; Engineering Projects</div>
+
+        <!-- PROJECT 1 -->
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title">SWARM-SAR™ : SpideyBot &mdash; 12-DOF Quadruped Search &amp; Rescue Robot</span>
+            <span class="item-date">Oct 2026 &ndash; Present</span>
+          </div>
+          <div class="tags-row">
+            <span class="tag">12-DOF Quadruped</span>
+            <span class="tag">Inverse Kinematics</span>
+            <span class="tag">Arduino UNO</span>
+            <span class="tag">ESP32</span>
+            <span class="tag">Web &amp; Gamepad Telemetry</span>
+          </div>
+          <ul class="bullets">
+            <li>Engineered a 12-DOF quadruped robot featuring a 3D-printed modular chassis, 3 servos per leg (coxa, femur, tibia), and an analytical inverse kinematics engine driving a stable 7-phase crawl gait.</li>
+            <li>Developed a custom web telemetry dashboard supporting physical Gamepad API steering and QR-code smartphone camera streaming for remote search &amp; rescue reconnaissance.</li>
+            <li>Designed high-current power distribution rails for 12 simultaneous micro-servos; currently implementing ESP32 integration for low-latency wireless control.</li>
+            <li>Co-led a 5-member engineering team across mechanical fabrication, wiring harness assembly, and hardware-in-the-loop debugging.</li>
+          </ul>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title">Builder Robot &mdash; ABU Robocon 2027 (Team Technotix)</span>
+            <span class="item-date">Aug 2026 &ndash; Present</span>
+          </div>
+          <div class="tags-row">
+            <span class="tag">Onshape</span>
+            <span class="tag">AutoCAD</span>
+            <span class="tag">Stair-Climbing Mechanism</span>
+            <span class="tag">Competition CAD</span>
+          </div>
+          <ul class="bullets">
+            <li>Researching and modeling autonomous stair-climbing mechanisms for Team Technotix under ABU Robocon 2027 competition parameters.</li>
+            <li>Optimized linkage geometry, torque ratios, and center-of-gravity (CG) limits to ensure reliable step clearance within strict dimensional and weight constraints.</li>
+            <li>Drafted mechanical CAD assemblies and manufacturing drawings for workshop fabrication.</li>
+          </ul>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title">4WD Autonomous Soccer Robot</span>
+            <span class="item-date">Aug 2026 &ndash; Present</span>
+          </div>
+          <div class="tags-row">
+            <span class="tag">Raspberry Pi 3</span>
+            <span class="tag">Arduino Uno</span>
+            <span class="tag">12V DC Motors</span>
+            <span class="tag">Servo Manipulators</span>
+          </div>
+          <ul class="bullets">
+            <li>Architected distributed compute architecture: Raspberry Pi 3 handles decision logic while Arduino Uno executes real-time motor PID and servo ball-control arms.</li>
+            <li>Prepared comprehensive BOM, circuit schematics, and isolated dual-voltage battery rails.</li>
+          </ul>
+        </div>
+
+        <!-- PROJECT 4 -->
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title">Autonomous Obstacle Avoidance Robot</span>
+            <span class="item-date">Aug 2026 &ndash; Sep 2026</span>
+          </div>
+          <div class="tags-row">
+            <span class="tag">Arduino</span>
+            <span class="tag">L298N H-Bridge</span>
+            <span class="tag">Ultrasonic Sensor</span>
+            <span class="tag">C++</span>
+          </div>
+          <ul class="bullets">
+            <li>Built an autonomous mobile rover with ultrasonic distance scanning, noise filtering, and state-machine obstacle evasion firmware.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div>
+        <div class="section-title">Leadership &amp; Campus Experience</div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title">Tech &amp; Research Executive &middot; 4C &mdash; Marketing Cell of NMIMS</span>
+            <span class="item-date">Aug 2026 &ndash; Present</span>
+          </div>
+          <ul class="bullets">
+            <li>Conduct technical research and build scripting tools in C++ and Python for cell operations.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title">IoT / Robotics Executive &middot; Google Developer Group (GDG) on Campus</span>
+            <span class="item-date">Aug 2026 &ndash; Present</span>
+          </div>
+          <ul class="bullets">
+            <li>Organize hands-on microcontroller, sensor interfacing, and IoT prototyping workshops for student developers.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title">Design Executive &middot; Team Technotix MPSTME</span>
+            <span class="item-date">Aug 2026 &ndash; Present</span>
+          </div>
+          <ul class="bullets">
+            <li>Design structural components in AutoCAD and Onshape for university competition robots.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <span class="item-title">SMCW Executive &middot; IET MPSTME On Campus</span>
+            <span class="item-date">Aug 2026 &ndash; Sep 2026</span>
+          </div>
+          <ul class="bullets">
+            <li>Produced video edits and digital visual media with DaVinci Resolve and Photoshop for campus events.</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+</body>
+</html>
