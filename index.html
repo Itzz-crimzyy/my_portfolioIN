@@ -16,8 +16,8 @@
   document.addEventListener("DOMContentLoaded",function(){setTimeout(function(){if(!document.querySelector(".reveal.show"))showAll();},1200);});
 })();
 </script>
-<title>Pratham Pachapur | Robots, IoT & Product Design</title>
-<meta name="description" content="Mechatronics student building robots, IoT systems and product designs.">
+<title>Pratham Pachapur | Robotics, Mechatronics & IoT</title>
+<meta name="description" content="Mechatronics student at NMIMS MPSTME building 12-DOF biomimetic quadrupeds, competition robotics, and IoT systems.">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -77,7 +77,14 @@ tailwind.config = { theme: { extend: {
 <section id="home" class="pt-32 pb-24 px-5">
   <div class="max-w-6xl mx-auto grid md:grid-cols-5 gap-12 items-center">
     <div class="md:col-span-3 order-2 md:order-1 reveal">
-      <p class="tag text-accent text-xs tracking-widest mb-4">// MECHATRONICS · IOT · ROBOTICS</p>
+      <div class="flex items-center gap-2 mb-4">
+        <a href="#projects" class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-accent/40 bg-accent/10 text-accent text-xs tag hover:bg-accent/20 transition">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Flagship: SWARM-SAR SpideyBot Live</span>
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+      <p class="tag text-accent text-xs tracking-widest mb-3">// MECHATRONICS &middot; 12-DOF ROBOTICS &middot; IOT</p>
       <h1 id="h-title" class="font-head font-bold text-4xl sm:text-5xl lg:text-6xl text-white leading-[1.1]"></h1>
       <p id="h-sub" class="mt-6 text-lg text-slate-400 max-w-xl"></p>
       <div class="mt-8 flex flex-wrap gap-3">
@@ -89,7 +96,7 @@ tailwind.config = { theme: { extend: {
     <div class="md:col-span-2 order-1 md:order-2 flex justify-center reveal">
       <div class="relative w-64 sm:w-72">
         <div class="absolute -inset-2 border border-accent/40 rounded-2xl"></div>
-        <div class="absolute -top-5 left-0 tag text-[10px] text-accent/70">FIG.01 — PORTRAIT</div>
+        <div class="absolute -top-5 left-0 tag text-[10px] text-accent/70">FIG.01 &mdash; PORTRAIT</div>
         <div class="relative aspect-[4/5] rounded-2xl overflow-hidden bg-panel ph flex items-center justify-center shadow-[0_0_70px_-15px_rgba(56,189,248,.6)]">
           <span class="font-head text-6xl font-bold text-accent/40">PP</span>
           <img id="photo" alt="Pratham Pachapur" src="profile.jpg" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()">
@@ -126,10 +133,17 @@ tailwind.config = { theme: { extend: {
 <!-- PROJECTS -->
 <section id="projects" class="py-20 px-5">
   <div class="max-w-6xl mx-auto">
-    <p class="tag text-accent text-xs mb-2">03 / PROJECTS</p>
-    <h2 class="font-head text-3xl font-bold text-white">Things I've built</h2>
-    <p class="text-slate-500 mt-2 mb-10">Tap a project to open its photos, details and documentation.</p>
-    <div id="proj" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+      <div>
+        <p class="tag text-accent text-xs mb-2">03 / PROJECTS</p>
+        <h2 class="font-head text-3xl font-bold text-white">Things I've built</h2>
+        <p class="text-slate-500 mt-2">Tap any project card to inspect specs, kinematics breakdown, schematics and documentation.</p>
+      </div>
+      <div class="tag text-xs text-accent/80 border border-line bg-panel px-3 py-1.5 rounded-lg shrink-0">
+        Showing 4 active &amp; completed builds
+      </div>
+    </div>
+    <div id="proj" class="grid sm:grid-cols-2 lg:grid-cols-2 gap-6"></div>
   </div>
 </section>
 
@@ -159,12 +173,12 @@ tailwind.config = { theme: { extend: {
     <p class="text-slate-500 mt-2 mb-8">One page, always up to date. Download the PDF or open it in a new tab.</p>
     <div class="grid md:grid-cols-5 gap-8 items-start">
       <div class="md:col-span-2 space-y-4 reveal">
-        <a id="resume-dl" href="#" download class="flex items-center justify-between px-5 py-4 rounded-lg bg-accent text-ink font-semibold hover:brightness-110"><span>Download PDF</span><span aria-hidden="true">↓</span></a>
-        <a id="resume-open" href="#" target="_blank" rel="noopener" class="flex items-center justify-between px-5 py-4 rounded-lg border border-line hover:border-accent hover:text-accent font-semibold"><span>Open in new tab</span><span aria-hidden="true">↗</span></a>
+        <a id="resume-dl" href="#" download class="flex items-center justify-between px-5 py-4 rounded-lg bg-accent text-ink font-semibold hover:brightness-110"><span>Download PDF</span><span aria-hidden="true">&darr;</span></a>
+        <a id="resume-open" href="#" target="_blank" rel="noopener" class="flex items-center justify-between px-5 py-4 rounded-lg border border-line hover:border-accent hover:text-accent font-semibold"><span>Open in new tab</span><span aria-hidden="true">&nearr;</span></a>
         <ul class="text-sm text-slate-400 space-y-2 pt-2">
-          <li>• Mechatronics, Robotics &amp; Automation, NMIMS MPSTME</li>
-          <li>• 3 robotics projects + 1 planned build</li>
-          <li>• 8 languages, from native to elementary</li>
+          <li>&bull; Mechatronics, Robotics &amp; Automation, NMIMS MPSTME</li>
+          <li>&bull; Flagship: 12-DOF SWARM-SAR SpideyBot &amp; Robocon Builder Robot</li>
+          <li>&bull; C, C++, Python, Inverse Kinematics, CAD &amp; IoT</li>
         </ul>
       </div>
       <a id="resume-prev" href="#" target="_blank" rel="noopener" class="md:col-span-3 block reveal rounded-xl overflow-hidden border border-line bg-panel shadow-[0_0_60px_-20px_rgba(56,189,248,.5)] hover:border-accent transition" aria-label="Open resume PDF">
@@ -180,21 +194,22 @@ tailwind.config = { theme: { extend: {
     <div>
       <p class="tag text-accent text-xs mb-2">07 / CONTACT</p>
       <h2 class="font-head text-3xl font-bold text-white">Let's build something</h2>
-      <p class="mt-4 text-slate-400">Got a project, a team that needs a mechanical or IoT hand, or just a question? Send a note.</p>
+      <p class="mt-4 text-slate-400">Got a project, a robotics team that needs a mechatronics or IoT hand, or just want to discuss biomimetic robotics? Send a note.</p>
       <div id="social" class="mt-6 flex gap-3"></div>
-      <div id="emails" class="mt-5 space-y-1 text-sm text-slate-400"></div>
+      <div id="emails" class="mt-5 space-y-2 text-sm text-slate-400"></div>
     </div>
     <div class="space-y-4">
       <input id="fn" placeholder="Name" class="w-full px-4 py-3 rounded-md bg-panel border border-line focus:outline-none focus:border-accent">
       <input id="fe" type="email" placeholder="Email" class="w-full px-4 py-3 rounded-md bg-panel border border-line focus:outline-none focus:border-accent">
       <textarea id="fm" rows="4" placeholder="Message" class="w-full px-4 py-3 rounded-md bg-panel border border-line focus:outline-none focus:border-accent"></textarea>
       <button id="send" class="w-full px-6 py-3 rounded-md bg-accent text-ink font-semibold hover:brightness-110">Send Message</button>
+      <p id="send-tip" class="text-xs text-slate-500 text-center">Opens your email client with your prefilled note.</p>
     </div>
   </div>
 </section>
 </main>
 
-<footer class="py-8 text-center text-xs tag text-slate-600 border-t border-line">© <span id="yr"></span> PRATHAM PACHAPUR · MUMBAI</footer>
+<footer class="py-8 text-center text-xs tag text-slate-600 border-t border-line">&copy; <span id="yr"></span> PRATHAM PACHAPUR &middot; MUMBAI</footer>
 
 <!-- PROJECT POPUP -->
 <dialog id="modal" class="w-[min(960px,94vw)] bg-panel text-slate-300 rounded-2xl border border-line p-0 m-auto overflow-hidden">
@@ -206,28 +221,29 @@ tailwind.config = { theme: { extend: {
 </dialog>
 
 <script>
-/* ======== EDIT YOUR CONTENT HERE ======== */
+/* ======== DATA & CONTENT CONFIG ======== */
 const D = {
   email: "prathampiitm0409@gmail.com",
   collegeEmail: "pratham.pachapur12@nmims.in",
   linkedin: "https://www.linkedin.com/in/pratham-pachapur-crimzyy",
   github: "https://github.com/Itzz-crimzyy",
-  resume: "Pratham_Pachapur_Resume.pdf",                // keep this file next to index.html
-  photo: "",                                            // TODO: e.g. "images/me.jpg"
+  resume: "Pratham_Pachapur_Resume.pdf",
+  photo: "",
   title: 'I build machines that <span class="text-accent">sense, think</span> and move.',
-  sub: "First-year Mechatronics student at NMIMS MPSTME, Mumbai. I work across robotics, IoT and CAD, and I'm happiest when an idea turns into hardware that actually runs.",
-  chips: ["Robotics","IoT","CAD & Product Design","Aviation geek"],
+  sub: "First-year Mechatronics student at NMIMS MPSTME, Mumbai. Core Lead on biomimetic robotics, competition mechanism designer for Robocon, and developer of IoT telemetry systems.",
+  chips: ["12-DOF Quadruped", "Robotics & IK", "IoT & Embedded", "CAD & Product Design", "Aviation Enthusiast"],
   about: [
-    "I'm studying Mechatronics, Robotics & Automation at NMIMS, where I split my time between circuits, code and CAD models. I like problems that need all three at once.",
-    "Outside class I'm part of three campus teams spanning research, design and robotics, which keeps me switching between engineering and storytelling.",
-    "Right now I'm levelling up in embedded programming, mechanical design and video, and looking for the next hard thing to build."
+    "I'm studying Mechatronics, Robotics & Automation at NMIMS MPSTME, Mumbai. My focus is on turning mechanical linkages, sensor feedback, and real-time firmware into responsive physical machines.",
+    "Recently, I co-led the development of SWARM-SAR : SpideyBot, a 12-DOF quadruped robot powered by analytical inverse kinematics and a custom web/gamepad control interface.",
+    "Outside class, I contribute across Team Technotix (ABU Robocon mechanism design), GDG on Campus (IoT/Robotics), and marketing technical research. I leverage modern agentic AI pairing to rapidly iterate from CAD to functional code."
   ],
-  stats: [["3","active roles"],["3","robots & builds"],["C · C++ · Py","languages"],["2030","B.Tech grad"]],
+  stats: [["4+","robots & mechanisms"],["12-DOF","quadruped built"],["C · C++ · Py","languages & RTOS"],["2030","B.Tech Mechatronics"]],
   exp: [
-    ["Tech & Research Executive","4C · Marketing Cell, NMIMS","Aug 2026 – now",["Research and technical groundwork for the cell's campaigns and content","Scripting and prototyping in C++ and Python"]],
-    ["IoT / Robotics Executive","Google Developer Group on Campus","Aug 2026 – now",["Hands-on IoT and robotics activity for the campus community","CAD and Onshape modelling for builds"]],
-    ["Design Executive","Technotix · MPSTME","Aug 2026 – now",["Mechanical design in AutoCAD and Onshape for competition robots"]],
-    ["SMCW Executive","IET MPSTME","Aug 2026 – Sep 2026",["Edited video and graphics with DaVinci Resolve and Photoshop","Created social media content for chapter events"]]
+    ["Core Lead · SWARM-SAR","Mechatronics Department, NMIMS MPSTME","Oct 2026 – now",["Co-leading development of 12-DOF quadruped search & rescue robot","Implemented analytical inverse kinematics, 7-phase crawl gait & web telemetry","Spearheading ESP32 telemetry upgrade and team integration"]],
+    ["Design Executive","Technotix · MPSTME (ABU Robocon)","Aug 2026 – now",["Mechanical design in AutoCAD and Onshape for competition robots","Researching and modeling stair-climbing mechanisms for Robocon 2027"]],
+    ["IoT / Robotics Executive","Google Developer Group on Campus","Aug 2026 – now",["Hands-on IoT and robotics workshops for the campus community","Prototyping microcontroller circuits and CAD components"]],
+    ["Tech & Research Executive","4C · Marketing Cell, NMIMS","Aug 2026 – now",["Research and technical groundwork for cell campaigns and digital assets","Scripting and prototyping interactive tools in C++ and Python"]],
+    ["SMCW Executive","IET MPSTME","Aug 2026 – Sep 2026",["Edited video and graphics with DaVinci Resolve and Photoshop","Created technical visual assets for campus chapter events"]]
   ],
   edu: [
     ["B.Tech, Mechatronics, Robotics & Automation","NMIMS Mukesh Patel School of Technology Management & Engineering","2026 – 2030",[]],
@@ -235,51 +251,133 @@ const D = {
     ["Vani Vidyalaya High School & Jr. College","SSC Class X · 90.4%","2018 – 2024",[]]
   ],
   projects: [
-    { id:"obstacle-robot", name:"Obstacle Avoidance Robot", short:"A self-driving Arduino robot that spots obstacles and steers around them.",
-      tags:["Arduino","L298N","C++"], status:"Completed",
-      images:["images/obstacle-1.jpg","images/obstacle-2.jpg","images/obstacle-3.jpg"],
-      overview:"An autonomous two-motor robot that drives forward until it detects something in its way, then decides how to turn and carries on without any human control.",
-      role:"Wiring, firmware and testing.",   // TODO: edit
-      specs:[["Controller","Arduino"],["Motor driver","L298N dual H-bridge"],["Language","C++ (Arduino)"],["Mode","Fully autonomous"]],
-      learned:["How an H-bridge driver controls motor direction and speed","Turning raw sensor readings into reliable driving decisions","Debugging hardware and firmware together"],
-      docs:[["Project report (PDF)","docs/obstacle-report.pdf"],["Circuit diagram","docs/obstacle-circuit.pdf"],["Source code (GitHub)","https://github.com/Itzz-crimzyy"]] },
-    { id:"soccer-robot", name:"4WD Soccer Robot", short:"A four-wheel-drive college robot with a Raspberry Pi brain and servo-driven arms.",
-      tags:["Raspberry Pi 3","Arduino Uno","Servos"], status:"In progress",
-      images:["images/soccer-1.jpg","images/soccer-2.jpg"],
-      overview:"A 4WD autonomous robot built for a college soccer challenge. A Raspberry Pi 3 handles the high-level decisions while an Arduino Uno takes care of motors and servo arms.",
-      role:"Hardware integration and circuit design.",
-      specs:[["Brain","Raspberry Pi 3"],["Low-level control","Arduino Uno"],["Drive","4 × 12V DC motors"],["Actuators","Servo arms"]],
-      learned:["Splitting work between a computer and a microcontroller","Planning a power budget for 12V motors","Drawing a clean BOM and circuit diagram"],
-      docs:[["Bill of materials","docs/soccer-bom.pdf"],["Circuit diagram","docs/soccer-circuit.pdf"]] },
-    { id:"builder-robot", name:"Builder Robot · Robocon 2027", short:"Stair-climbing mechanism design for Team Technotix's ABU Robocon entry.",
-      tags:["CAD","Onshape","Mechanism design"], status:"Design phase",
-      images:["images/builder-1.jpg","images/builder-2.jpg"],
-      overview:"Part of Team Technotix's entry for ABU Robocon 2027, themed \"Pursuit of Mustika Nusantara\". I research and design how the autonomous Builder Robot will climb stairs.",
-      role:"Design department: research and CAD.",
-      specs:[["Competition","ABU Asia-Pacific Robocon 2027"],["Team","Technotix, NMIMS MPSTME"],["Focus","Stair-climbing mechanism"],["Tools","Onshape, AutoCAD"]],
-      learned:["Comparing climbing mechanisms against competition rules","Writing a design report others can build from","Designing around weight and size limits"],
-      docs:[["Design report (PDF)","docs/builder-design-report.pdf"],["CAD models","docs/builder-cad.zip"]] },
-    { id:"swarm-sar", name:"SWARM_SAR Spider Bot", short:"Semi-autonomous 12-DOF quadruped spider robot for surveillance and search & rescue.",
-      tags:["Arduino UNO","12 × 9G Servo","12 DOF"], status:"Planned",
-      images:["images/swarm-sar-1.jpg"],
-      overview:"SWARM_SAR is a planned semi-autonomous quadruped spider robot for surveillance and search-and-rescue. It walks on four legs with three servos each, giving 12 degrees of freedom.",
-      role:"Designer and builder (planned).",
-      specs:[["Controller","Arduino UNO"],["Actuation","12 × 9G servos (12 DOF)"],["Power","2 × 18650 cells"],["Body","3D-printed spider frame"]],
-      learnedLabel:"PLANNED GOALS",
-      learned:["Gait design and leg kinematics for a 12-DOF walker","Powering 12 servos safely from a battery pack","Adding sensors for semi-autonomous obstacle detection"],
-      docs:[] }
+    {
+      id: "swarm-sar",
+      name: "SWARM-SAR™ : SpideyBot",
+      short: "12-DOF semi-autonomous quadruped search & rescue robot driven by analytical inverse kinematics and custom web app control.",
+      tags: ["12-DOF Quadruped", "Inverse Kinematics", "Arduino UNO", "ESP32", "Web Control"],
+      status: "Flagship Build",
+      images: [
+        "images/spideybot-banner.png",
+        "images/spideybot-fig1-assembly.png",
+        "images/spideybot-fig2-web.png",
+        "images/spideybot-fig3-mechanics.png",
+        "images/spideybot-fig4-wiring.png"
+      ],
+      overview: "SWARM-SAR™ SpideyBot is our first-year Mechatronics flagship quadruped designed for navigating search-and-rescue disaster zones. Built with a modular 3D-printed chassis, 12 degrees of freedom, an analytical inverse kinematics engine, and a custom browser/gamepad telemetry interface with smartphone vision tethering.",
+      role: "Core Lead (Pratham Pachapur & Yash Sawant) — Mechanical assembly, 12-channel embedded wiring harness, inverse kinematics calibration, web app control integration, and testing.",
+      specs: [
+        ["Degrees of Freedom", "12-DOF (Coxa, Femur & Tibia per leg)"],
+        ["Controller", "Arduino UNO + dedicated 16-channel Servo Shield"],
+        ["Motion Engine", "Analytical Inverse Kinematics (7-Phase Crawl Gait)"],
+        ["Actuators", "12 × 9G Micro Servos"],
+        ["Control Interface", "Custom Web App + Gamepad API + QR Camera Link"],
+        ["Next Milestone", "ESP32 telemetry for wireless low-latency gamepad & waypoint navigation"]
+      ],
+      learnedLabel: "WHAT WE BUILT & KEY TAKEAWAYS",
+      learned: [
+        "Formulated and calibrated analytical inverse kinematics for smooth multi-joint leg coordination",
+        "Engineered power distribution rails to handle peak surge currents across 12 servos simultaneously",
+        "Implemented real-time control via web app, physical gamepad, and camera stream linked through QR code",
+        "Co-led the team alongside Yash Sawant and contributors Aaditya Parshurami, Palash Ajmera, and Vihaan Kapadia",
+        "Vibe-coded firmware and telemetry web app using agentic AI pairing for rapid software delivery"
+      ],
+      docs: [
+        ["LinkedIn Project Announcement", "https://www.linkedin.com/in/pratham-pachapur-crimzyy"],
+        ["GitHub Organization / Repo", "https://github.com/Itzz-crimzyy"]
+      ]
+    },
+    {
+      id: "builder-robot",
+      name: "Builder Robot · Robocon 2027",
+      short: "Stair-climbing mechanism design for Team Technotix's entry in ABU Robocon 2027.",
+      tags: ["CAD", "Onshape", "Mechanism Design", "Robocon"],
+      status: "Design Phase",
+      images: ["images/builder-1.jpg", "images/builder-2.jpg"],
+      overview: "Part of Team Technotix's entry for ABU Robocon 2027, themed 'Pursuit of Mustika Nusantara'. I research, model, and simulate how the autonomous Builder Robot will negotiate stairs and obstacles reliably.",
+      role: "Design Department: Kinematic research, CAD modeling, and mechanism optimization.",
+      specs: [
+        ["Competition", "ABU Asia-Pacific Robocon 2027"],
+        ["Team", "Technotix, NMIMS MPSTME"],
+        ["Focus", "Stair-climbing linkage mechanism"],
+        ["Tools", "Onshape, AutoCAD"]
+      ],
+      learnedLabel: "KEY TECHNICAL TAKEAWAYS",
+      learned: [
+        "Analyzing climbing mechanisms against strict competition dimensional rules",
+        "Weight budget optimization and Center-of-Gravity (CG) management",
+        "Drafting engineering manufacturing drawings for workshop fabrication"
+      ],
+      docs: [
+        ["Design Report (PDF)", "docs/builder-design-report.pdf"],
+        ["CAD Models", "docs/builder-cad.zip"]
+      ]
+    },
+    {
+      id: "soccer-robot",
+      name: "4WD Soccer Robot",
+      short: "Four-wheel-drive college robot with a Raspberry Pi brain, Arduino low-level controller, and servo arms.",
+      tags: ["Raspberry Pi 3", "Arduino Uno", "Servos", "4WD"],
+      status: "In Progress",
+      images: ["images/soccer-1.jpg", "images/soccer-2.jpg"],
+      overview: "A 4WD autonomous robot built for a college soccer challenge. A Raspberry Pi 3 handles decision-making while an Arduino Uno executes motor speeds and servo ball-control arms.",
+      role: "Hardware integration, motor power budgeting, and circuit wiring.",
+      specs: [
+        ["High-Level Compute", "Raspberry Pi 3"],
+        ["Low-Level Controller", "Arduino Uno"],
+        ["Drive System", "4 × 12V DC Motors"],
+        ["Actuators", "Servo kicker/grabber arms"]
+      ],
+      learnedLabel: "KEY TECHNICAL TAKEAWAYS",
+      learned: [
+        "Splitting workloads between an onboard SBC and microcontroller",
+        "Designing noise-isolated power supplies for high-torque 12V motors",
+        "Drawing electrical BOMs and debugging serial telemetry protocols"
+      ],
+      docs: [
+        ["Bill of Materials", "docs/soccer-bom.pdf"],
+        ["Circuit Diagram", "docs/soccer-circuit.pdf"]
+      ]
+    },
+    {
+      id: "obstacle-robot",
+      name: "Obstacle Avoidance Robot",
+      short: "Autonomous Arduino robot with ultrasonic sensing and intelligent obstacle steering.",
+      tags: ["Arduino", "L298N", "C++", "Sensors"],
+      status: "Completed",
+      images: ["images/obstacle-1.jpg", "images/obstacle-2.jpg", "images/obstacle-3.jpg"],
+      overview: "An autonomous dual-motor robot that scans for obstacles, computes turn trajectories using sensor thresholds, and drives autonomously without human intervention.",
+      role: "Circuit design, C++ firmware, sensor calibration, and physical prototyping.",
+      specs: [
+        ["Controller", "Arduino Uno"],
+        ["Motor Driver", "L298N Dual H-Bridge"],
+        ["Firmware", "C++ (Arduino IDE)"],
+        ["Navigation", "Ultrasonic distance thresholding"]
+      ],
+      learnedLabel: "KEY TECHNICAL TAKEAWAYS",
+      learned: [
+        "Controlling DC motors with H-bridge PWM directional switching",
+        "Filtering noisy ultrasonic sensor readings into stable state transitions",
+        "Rapid mechanical chassis prototyping and standalone battery management"
+      ],
+      docs: [
+        ["Project Report (PDF)", "docs/obstacle-report.pdf"],
+        ["Circuit Diagram", "docs/obstacle-circuit.pdf"],
+        ["Source Code (GitHub)", "https://github.com/Itzz-crimzyy"]
+      ]
+    }
   ],
   skills: {
-    "Robotics & Embedded": ["Arduino","Microcontrollers","IoT","Robotics","AI basics"],
-    "Design & Media": ["AutoCAD","Onshape","Photoshop","DaVinci Resolve","Video editing","Content creation"],
-    "Programming": ["C","C++","Python"],
-    "AI & Productivity": ["Google Workspace","Gemini","Prompt engineering","AI literacy"]
+    "Robotics & Embedded": ["12-DOF Quadruped", "Inverse Kinematics", "Arduino", "ESP32", "Microcontrollers", "IoT", "Sensors & Actuators", "Servo Drivers"],
+    "Design & CAD": ["AutoCAD", "Onshape", "Mechanism Design", "3D Printing & Slicing", "Photoshop", "DaVinci Resolve"],
+    "Programming": ["C", "C++", "Python", "JavaScript / HTML5", "Embedded C++"],
+    "AI & Modern Workflows": ["Agentic AI Workflows", "Gemini & Claude Pairing", "Prompt Engineering", "Google Workspace", "Technical Roadmaps"]
   },
   certs: [
+    { name:"Google AI Essentials Specialization", pdf:"Certifications/google-ai-essentials.pdf", issuer:"Google", date:"Oct 2026", id:"7U0SLLW38U3C", link:"https://coursera.org/verify/specialization/7U0SLLW38U3C", skills:["AI Literacy","Generative AI","Prompt Engineering"] },
     { name:"Stay Ahead of the AI Curve", pdf:"Certifications/stay-ahead-of-the-ai-curve.pdf", issuer:"Google", date:"Oct 2026", id:"JX3DPBC2G0UX", link:"https://coursera.org/verify/JX3DPBC2G0UX", skills:[] },
     { name:"Use AI Responsibly", pdf:"Certifications/use-ai-responsibly.pdf", issuer:"Google", date:"Oct 2026", id:"PTYY8AU4SLXJ", link:"https://coursera.org/verify/PTYY8AU4SLXJ", skills:[] },
     { name:"Discover the Art of Prompting", pdf:"Certifications/discover-the-art-of-prompting.pdf", issuer:"Google", date:"Oct 2026", id:"LLWCQF489XTJ", link:"https://coursera.org/verify/LLWCQF489XTJ", skills:[] },
-    { name:"Google AI Essentials Specialization", pdf:"Certifications/google-ai-essentials.pdf", issuer:"Google", date:"Oct 2026", id:"7U0SLLW38U3C", link:"https://coursera.org/verify/specialization/7U0SLLW38U3C", skills:[] },
     { name:"Maximize Productivity With AI Tools", pdf:"Certifications/maximize-productivity-with-ai-tools.pdf", issuer:"Google", date:"Oct 2026", id:"EV5XE6IB4EFV", link:"https://coursera.org/verify/EV5XE6IB4EFV", skills:["AI Literacy","Google Gemini","Prompt Engineering","Google Workspace"] },
     { name:"Introduction to AI", pdf:"Certifications/introduction-to-ai.pdf", issuer:"Google", date:"Sep 2026", id:"9XI2XAWP50NS", link:"https://coursera.org/verify/9XI2XAWP50NS", skills:["AI Integrations","Technology Roadmaps"] }
   ]
@@ -291,43 +389,57 @@ const nav = ["Home","About","Experience","Projects","Skills","Certifications","R
 const P = {
   in:'M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 110-4.2 2.1 2.1 0 010 4.2zM7.1 20.5H3.6V9h3.5v11.5z',
   gh:'M12 .5a11.5 11.5 0 00-3.6 22.4c.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 015.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .4.2.7.8.6A11.5 11.5 0 0012 .5z',
-  mail:'M2 5.5A1.5 1.5 0 013.5 4h17A1.5 1.5 0 0122 5.5v13a1.5 1.5 0 01-1.5 1.5h-17A1.5 1.5 0 012 18.5v-13zM4.2 6L12 11.8 19.8 6H4.2z'
+  mail:'M2 5.5A1.5 1.5 0 013.5 4h17A1.5 1.5 0 0122 5.5v13a1.5 1.5 0 01-1.5 1.5h-17A1.5 1.5 0 012 18.5v-13zM4.2 6L12 11.8 19.8 6H4.2z',
+  copy:'M8 7v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-8a2 2 0 00-2 2zm-4 4v8a2 2 0 002 2h8'
 };
 const svg = p => `<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="${p}"/></svg>`;
 const ph = t => `<div class="ph w-full h-full flex items-center justify-center text-center p-4 tag text-[11px] text-accent/60">${t}</div>`;
 
-// nav + hero + about
+// Navigation links
 const li = nav.map(n => `<li><a href="#${n.toLowerCase()}" class="hover:text-accent">${n}</a></li>`).join("");
 $("#links").innerHTML = li; $("#mobile").innerHTML = li;
 $("#burger").onclick = () => $("#mobile").classList.toggle("hidden");
 $("#mobile").onclick = e => { if (e.target.tagName === "A") $("#mobile").classList.add("hidden"); };
-// Resume PDF is loaded from the file next to index.html
+
+// Resume PDF link binding
 (function () {
   const url = D.resume;
   ["#resume-btn", "#resume-dl"].forEach(s => { $(s).href = url; $(s).setAttribute("download", "Pratham_Pachapur_Resume.pdf"); });
   ["#resume-open", "#resume-prev"].forEach(s => { $(s).href = url; });
 })();
+
 if (D.photo) $("#photo").src = D.photo;
 $("#h-title").innerHTML = D.title; $("#h-sub").textContent = D.sub;
 $("#chips").innerHTML = D.chips.map(c => `<span class="tag text-xs px-3 py-1 rounded-full border border-line text-slate-400">${c}</span>`).join("");
 $("#about-body").innerHTML = D.about.map(p => `<p>${p}</p>`).join("");
 $("#stats").innerHTML = D.stats.map(([n,l]) => `<div class="rounded-xl border border-line bg-panel/70 p-4 text-center"><div class="font-head text-xl font-bold text-accent">${n}</div><div class="tag text-[11px] mt-1 text-slate-500">${l}</div></div>`).join("");
 
-// timelines
+// Experience & Education Timelines
 const tl = rows => rows.map(([t,o,d,b]) => `<li class="ml-6 reveal"><span class="absolute -left-[7px] mt-1.5 w-3 h-3 rounded-full bg-accent ring-4 ring-ink"></span>
   <p class="tag text-[11px] text-accent">${d}</p><h4 class="font-semibold text-white">${t}</h4><p class="text-sm text-slate-500">${o}</p>
   ${b.length ? `<ul class="mt-2 text-sm list-disc ml-4 space-y-1 text-slate-400">${b.map(x => `<li>${x}</li>`).join("")}</ul>` : ""}</li>`).join("");
 $("#exp").innerHTML = tl(D.exp); $("#edu").innerHTML = tl(D.edu);
 
-// project cards
-$("#proj").innerHTML = D.projects.map((p,i) => `<button data-i="${i}" class="reveal text-left rounded-2xl overflow-hidden bg-panel border border-line hover:border-accent hover:-translate-y-1 transition group focus:outline-none focus:border-accent">
-  <div class="aspect-[16/10] bg-ink relative overflow-hidden">${ph("add photo: " + p.images[0])}<img src="${p.images[0]}" alt="${p.name}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-500" onerror="this.remove()"></div>
-  <div class="p-5"><div class="flex items-center justify-between"><h3 class="font-head font-bold text-white">${p.name}</h3><span class="tag text-[10px] text-accent">${p.status}</span></div>
-  <p class="mt-2 text-sm text-slate-400">${p.short}</p>
-  <div class="mt-4 flex flex-wrap gap-2">${p.tags.map(t => `<span class="tag text-[11px] px-2 py-0.5 rounded bg-accent/10 text-accent">${t}</span>`).join("")}</div>
-  <p class="mt-4 text-xs text-accent font-semibold">Open project →</p></div></button>`).join("");
+// Project Cards
+$("#proj").innerHTML = D.projects.map((p,i) => {
+  const isFlagship = i === 0;
+  return `<button data-i="${i}" class="reveal text-left rounded-2xl overflow-hidden bg-panel border ${isFlagship ? 'border-accent/60 shadow-[0_0_40px_-15px_rgba(56,189,248,.3)]' : 'border-line'} hover:border-accent hover:-translate-y-1 transition group focus:outline-none focus:border-accent">
+  <div class="aspect-video bg-ink relative overflow-hidden">${ph("Project Photo: " + p.images[0])}<img src="${p.images[0]}" alt="${p.name}" class="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.02] transition duration-500" onerror="this.remove()"></div>
+  <div class="p-6">
+    <div class="flex items-center justify-between gap-2">
+      <h3 class="font-head font-bold text-lg text-white group-hover:text-accent transition">${p.name}</h3>
+      <span class="tag text-[10px] px-2 py-0.5 rounded ${isFlagship ? 'bg-accent text-ink font-bold' : 'bg-accent/10 text-accent'}">${p.status}</span>
+    </div>
+    <p class="mt-2.5 text-sm text-slate-400 line-clamp-2 leading-relaxed">${p.short}</p>
+    <div class="mt-4 flex flex-wrap gap-2">${p.tags.map(t => `<span class="tag text-[11px] px-2.5 py-0.5 rounded bg-line/60 text-slate-300">${t}</span>`).join("")}</div>
+    <div class="mt-5 pt-3 border-t border-line/60 flex items-center justify-between">
+      <span class="text-xs text-accent font-semibold flex items-center gap-1">Inspect build breakdown &rarr;</span>
+      <span class="tag text-[10px] text-slate-500">${p.images.length} assets</span>
+    </div>
+  </div></button>`;
+}).join("");
 
-// modal
+// Modal Viewer
 const modal = $("#modal");
 function openProject(i) {
   const p = D.projects[i];
@@ -335,22 +447,22 @@ function openProject(i) {
   $("#m-title").textContent = p.name;
   $("#m-body").innerHTML = `
     <div>
-      <div id="main-img" class="aspect-video rounded-xl overflow-hidden bg-ink border border-line relative">${ph("add photo: " + p.images[0])}<img src="${p.images[0]}" alt="" class="absolute inset-0 w-full h-full object-contain bg-ink" onerror="this.remove()"></div>
-      <div class="mt-3 flex gap-3 overflow-x-auto pb-1">${p.images.map((s,k) => `<button data-src="${s}" class="thumb shrink-0 w-24 aspect-video rounded-lg overflow-hidden border ${k?'border-line':'border-accent'} bg-ink relative">${ph(k+1)}<img src="${s}" alt="" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()"></button>`).join("")}</div>
+      <div id="main-img" class="aspect-video rounded-xl overflow-hidden bg-ink border border-line relative">${ph("Asset: " + p.images[0])}<img src="${p.images[0]}" alt="" class="absolute inset-0 w-full h-full object-contain bg-ink" onerror="this.remove()"></div>
+      <div class="mt-3 flex gap-3 overflow-x-auto pb-2">${p.images.map((s,k) => `<button data-src="${s}" class="thumb shrink-0 w-28 aspect-video rounded-lg overflow-hidden border ${k?'border-line':'border-accent'} bg-ink relative">${ph(k+1)}<img src="${s}" alt="" class="absolute inset-0 w-full h-full object-cover" onerror="this.remove()"></button>`).join("")}</div>
     </div>
     <div class="grid md:grid-cols-3 gap-8">
       <div class="md:col-span-2 space-y-6">
         <div><h4 class="tag text-xs text-accent mb-2">OVERVIEW</h4><p class="text-slate-300 leading-relaxed">${p.overview}</p></div>
         <div><h4 class="tag text-xs text-accent mb-2">MY ROLE</h4><p class="text-slate-300">${p.role}</p></div>
-        <div><h4 class="tag text-xs text-accent mb-2">${p.learnedLabel||"WHAT I LEARNED"}</h4><ul class="list-disc ml-5 space-y-1 text-slate-400">${p.learned.map(x => `<li>${x}</li>`).join("")}</ul></div>
+        <div><h4 class="tag text-xs text-accent mb-2">${p.learnedLabel||"WHAT I LEARNED"}</h4><ul class="list-disc ml-5 space-y-1.5 text-slate-400">${p.learned.map(x => `<li>${x}</li>`).join("")}</ul></div>
       </div>
       <div class="space-y-6">
-        <div><h4 class="tag text-xs text-accent mb-2">SPECS</h4><dl class="text-sm divide-y divide-line border border-line rounded-lg">${p.specs.map(([k,v]) => `<div class="px-3 py-2"><dt class="text-slate-500 text-xs">${k}</dt><dd class="text-slate-200">${v}</dd></div>`).join("")}</dl></div>
-        <div><h4 class="tag text-xs text-accent mb-2">STACK</h4><div class="flex flex-wrap gap-2">${p.tags.map(t => `<span class="tag text-[11px] px-2 py-0.5 rounded bg-accent/10 text-accent">${t}</span>`).join("")}</div></div>
+        <div><h4 class="tag text-xs text-accent mb-2">TECHNICAL SPECS</h4><dl class="text-sm divide-y divide-line border border-line rounded-lg">${p.specs.map(([k,v]) => `<div class="px-3 py-2"><dt class="text-slate-500 text-xs">${k}</dt><dd class="text-slate-200 font-medium">${v}</dd></div>`).join("")}</dl></div>
+        <div><h4 class="tag text-xs text-accent mb-2">STACK &amp; DOMAINS</h4><div class="flex flex-wrap gap-2">${p.tags.map(t => `<span class="tag text-[11px] px-2 py-0.5 rounded bg-accent/10 text-accent">${t}</span>`).join("")}</div></div>
       </div>
     </div>
-    ${p.docs.length ? `<div><h4 class="tag text-xs text-accent mb-3">DOCUMENTATION</h4>
-      <div class="grid sm:grid-cols-2 gap-3">${p.docs.map(([l,h]) => `<a href="${h}" target="_blank" rel="noopener" class="flex items-center justify-between px-4 py-3 rounded-lg border border-line hover:border-accent hover:text-accent transition"><span>${l}</span><span aria-hidden="true">↗</span></a>`).join("")}</div>
+    ${p.docs && p.docs.length ? `<div><h4 class="tag text-xs text-accent mb-3">DOCUMENTATION &amp; LINKS</h4>
+      <div class="grid sm:grid-cols-2 gap-3">${p.docs.map(([l,h]) => `<a href="${h}" target="_blank" rel="noopener" class="flex items-center justify-between px-4 py-3 rounded-lg border border-line hover:border-accent hover:text-accent transition"><span>${l}</span><span aria-hidden="true">&nearr;</span></a>`).join("")}</div>
     </div>` : ""}`;
   $("#m-body").scrollTop = 0;
   document.body.classList.add("lock");
@@ -360,7 +472,7 @@ $("#proj").onclick = e => { const b = e.target.closest("button[data-i]"); if (b)
 $("#m-body").onclick = e => {
   const t = e.target.closest(".thumb"); if (!t) return;
   const box = $("#main-img");
-  box.innerHTML = ph("add photo: " + t.dataset.src) + `<img src="${t.dataset.src}" alt="" class="absolute inset-0 w-full h-full object-contain bg-ink" onerror="this.remove()">`;
+  box.innerHTML = ph("Asset: " + t.dataset.src) + `<img src="${t.dataset.src}" alt="" class="absolute inset-0 w-full h-full object-contain bg-ink" onerror="this.remove()">`;
   document.querySelectorAll(".thumb").forEach(x => { x.classList.toggle("border-accent", x === t); x.classList.toggle("border-line", x !== t); });
 };
 const closeModal = () => modal.close();
@@ -368,29 +480,41 @@ $("#m-close").onclick = closeModal;
 modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
 modal.addEventListener("close", () => document.body.classList.remove("lock"));
 
-// skills + certs
+// Skills & Certifications
 $("#skill").innerHTML = Object.entries(D.skills).map(([k,v]) => `<div class="reveal rounded-2xl p-6 bg-panel border border-line"><h3 class="tag text-xs text-accent mb-4">${k.toUpperCase()}</h3><div class="flex flex-wrap gap-2">${v.map(x => `<span class="text-sm px-3 py-1 rounded-md border border-line text-slate-300">${x}</span>`).join("")}</div></div>`).join("");
 $("#cert").innerHTML = D.certs.map(c => `<article class="reveal rounded-2xl p-6 bg-panel border border-line hover:border-accent transition">
-  <div class="flex items-start justify-between gap-3"><div><p class="tag text-[11px] text-accent">${c.issuer.toUpperCase()} · ${c.date}</p><h3 class="mt-1 font-head font-bold text-white">${c.name}</h3></div>
+  <div class="flex items-start justify-between gap-3"><div><p class="tag text-[11px] text-accent">${c.issuer.toUpperCase()} &middot; ${c.date}</p><h3 class="mt-1 font-head font-bold text-white">${c.name}</h3></div>
   ${(c.pdf||c.link) ? `<a href="${c.pdf||c.link}" target="_blank" rel="noopener" aria-label="Open ${c.name} certificate" title="View certificate" class="shrink-0 -m-2 p-2 rounded-lg text-accent hover:bg-accent/10 hover:scale-110 transition"><svg class="w-6 h-6 text-accent shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5L7 22l5-3 5 3-1.500-7.500"/></svg></a>` : `<svg class="w-6 h-6 text-accent shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 14.5L7 22l5-3 5 3-1.500-7.500"/></svg>`}</div>
   <p class="tag text-[11px] text-slate-500 mt-3">Credential ID: ${c.id}</p>
   <div class="mt-4 flex flex-wrap gap-2">${c.skills.map(x => `<span class="text-xs px-2.5 py-1 rounded-md border border-line text-slate-300">${x}</span>`).join("")}</div>
-  ${c.link ? `<a href="${c.link}" target="_blank" rel="noopener" class="inline-block mt-5 text-sm font-semibold text-accent hover:underline">Show credential ↗</a>` : ""}</article>`).join("");
+  ${c.link ? `<a href="${c.link}" target="_blank" rel="noopener" class="inline-block mt-5 text-sm font-semibold text-accent hover:underline">Show credential &nearr;</a>` : ""}</article>`).join("");
 
-// contact
+// Social and Contact
 $("#social").innerHTML = [["LinkedIn",D.linkedin,P.in],["GitHub",D.github,P.gh],["Email","mailto:"+D.email,P.mail]].map(([n,h,p]) =>
-  `<a href="${h}" target="_blank" rel="noopener" aria-label="${n}" class="p-3 rounded-md border border-line hover:border-accent hover:text-accent">${svg(p)}</a>`).join("");
-$("#emails").innerHTML = `<p>Personal: <a class="text-accent hover:underline" href="mailto:${D.email}">${D.email}</a></p><p>College: <a class="text-accent hover:underline" href="mailto:${D.collegeEmail}">${D.collegeEmail}</a></p>`;
+  `<a href="${h}" target="_blank" rel="noopener" aria-label="${n}" class="p-3 rounded-md border border-line hover:border-accent hover:text-accent transition">${svg(p)}</a>`).join("");
+$("#emails").innerHTML = `
+  <p class="flex items-center gap-2"><span>Personal:</span> <a class="text-accent hover:underline font-mono" href="mailto:${D.email}">${D.email}</a></p>
+  <p class="flex items-center gap-2"><span>College:</span> <a class="text-accent hover:underline font-mono" href="mailto:${D.collegeEmail}">${D.collegeEmail}</a></p>
+`;
+
 $("#send").onclick = () => {
-  const b = `${$("#fm").value}\n\n— ${$("#fn").value} (${$("#fe").value})`;
-  location.href = `mailto:${D.email}?subject=${encodeURIComponent("Portfolio enquiry from " + $("#fn").value)}&body=${encodeURIComponent(b)}`;
+  const name = $("#fn").value.trim();
+  const email = $("#fe").value.trim();
+  const msg = $("#fm").value.trim();
+  if (!name || !msg) {
+    alert("Please enter your name and message.");
+    return;
+  }
+  const body = `${msg}\n\n— ${name} (${email || "No email provided"})`;
+  location.href = `mailto:${D.email}?subject=${encodeURIComponent("Portfolio message from " + name)}&body=${encodeURIComponent(body)}`;
 };
 $("#yr").textContent = new Date().getFullYear();
 
+// Scroll animation trigger
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("show"); io.unobserve(e.target); } }), { threshold: .1 });
 document.querySelectorAll(".reveal").forEach(el => io.observe(el));
 
-// light / dark mode (dark is the default)
+// Light / Dark mode toggling
 const PHOTO_LIGHT = "profile-light.jpg";
 const PHOTO_DARK = $("#photo") ? $("#photo").getAttribute("src") : "";
 const root = document.documentElement;
