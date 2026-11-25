@@ -181,8 +181,11 @@ tailwind.config = { theme: { extend: {
           <li>&bull; C, C++, Python, Inverse Kinematics, CAD &amp; IoT</li>
         </ul>
       </div>
-      <a id="resume-prev" href="#" target="_blank" rel="noopener" class="md:col-span-3 block reveal rounded-xl overflow-hidden border border-line bg-panel shadow-[0_0_60px_-20px_rgba(56,189,248,.5)] hover:border-accent transition" aria-label="Open interactive resume">
-        <img src="resume-preview.png" alt="Preview of Pratham Pachapur's resume" class="w-full h-auto">
+      <a id="resume-prev" href="resume.html" target="_blank" rel="noopener" class="md:col-span-3 block reveal rounded-xl overflow-hidden border border-line bg-panel relative shadow-[0_0_60px_-20px_rgba(56,189,248,.5)] hover:border-accent transition group" aria-label="Open interactive resume">
+        <img id="resume-img" src="resume-preview.png" onerror="if(!this.dataset.retried){this.dataset.retried=1;this.src='images/resume-preview.png';}" alt="Preview of Pratham Pachapur's resume" class="w-full h-auto block">
+        <div class="absolute inset-0 bg-ink/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center pointer-events-none">
+          <span class="tag text-xs px-3.5 py-1.5 rounded-lg bg-panel/90 border border-accent text-accent font-semibold shadow-xl backdrop-blur">Open Interactive Resume &nearr;</span>
+        </div>
       </a>
     </div>
   </div>
@@ -229,6 +232,7 @@ const D = {
   github: "https://github.com/Itzz-crimzyy",
   resume: "Pratham_Pachapur_Resume.pdf",
   resumeHtml: "resume.html",
+  resumePreview: "resume-preview.png",
   photo: "",
   title: 'I build machines that <span class="text-accent">sense, think</span> and move.',
   sub: "First-year Mechatronics student at NMIMS MPSTME, Mumbai. Core Lead on biomimetic robotics, competition mechanism designer for Robocon, and developer of IoT telemetry systems.",
@@ -406,6 +410,10 @@ $("#mobile").onclick = e => { if (e.target.tagName === "A") $("#mobile").classLi
   const htmlUrl = D.resumeHtml || "resume.html";
   ["#resume-btn", "#resume-dl"].forEach(s => { const el = $(s); if (el) { el.href = pdfUrl; el.setAttribute("download", "Pratham_Pachapur_Resume.pdf"); } });
   ["#resume-open", "#resume-prev"].forEach(s => { const el = $(s); if (el) { el.href = htmlUrl; } });
+  const prevImg = $("#resume-img");
+  if (prevImg && D.resumePreview) {
+    prevImg.src = D.resumePreview;
+  }
 })();
 
 if (D.photo) $("#photo").src = D.photo;
