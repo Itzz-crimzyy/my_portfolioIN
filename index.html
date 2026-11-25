@@ -170,18 +170,18 @@ tailwind.config = { theme: { extend: {
   <div class="max-w-5xl mx-auto">
     <p class="tag text-accent text-xs mb-2">06 / RESUME</p>
     <h2 class="font-head text-3xl font-bold text-white">My resume</h2>
-    <p class="text-slate-500 mt-2 mb-8">One page, always up to date. Download the PDF or open it in a new tab.</p>
+    <p class="text-slate-500 mt-2 mb-8">One page, always up to date. Download the PDF or explore the interactive version.</p>
     <div class="grid md:grid-cols-5 gap-8 items-start">
       <div class="md:col-span-2 space-y-4 reveal">
         <a id="resume-dl" href="#" download class="flex items-center justify-between px-5 py-4 rounded-lg bg-accent text-ink font-semibold hover:brightness-110"><span>Download PDF</span><span aria-hidden="true">&darr;</span></a>
-        <a id="resume-open" href="#" target="_blank" rel="noopener" class="flex items-center justify-between px-5 py-4 rounded-lg border border-line hover:border-accent hover:text-accent font-semibold"><span>Open in new tab</span><span aria-hidden="true">&nearr;</span></a>
+        <a id="resume-open" href="#" target="_blank" rel="noopener" class="flex items-center justify-between px-5 py-4 rounded-lg border border-line hover:border-accent hover:text-accent font-semibold"><span>View Interactive Resume</span><span aria-hidden="true">&nearr;</span></a>
         <ul class="text-sm text-slate-400 space-y-2 pt-2">
           <li>&bull; Mechatronics, Robotics &amp; Automation, NMIMS MPSTME</li>
           <li>&bull; Flagship: 12-DOF SWARM-SAR SpideyBot &amp; Robocon Builder Robot</li>
           <li>&bull; C, C++, Python, Inverse Kinematics, CAD &amp; IoT</li>
         </ul>
       </div>
-      <a id="resume-prev" href="#" target="_blank" rel="noopener" class="md:col-span-3 block reveal rounded-xl overflow-hidden border border-line bg-panel shadow-[0_0_60px_-20px_rgba(56,189,248,.5)] hover:border-accent transition" aria-label="Open resume PDF">
+      <a id="resume-prev" href="#" target="_blank" rel="noopener" class="md:col-span-3 block reveal rounded-xl overflow-hidden border border-line bg-panel shadow-[0_0_60px_-20px_rgba(56,189,248,.5)] hover:border-accent transition" aria-label="Open interactive resume">
         <img src="resume-preview.png" alt="Preview of Pratham Pachapur's resume" class="w-full h-auto">
       </a>
     </div>
@@ -228,6 +228,7 @@ const D = {
   linkedin: "https://www.linkedin.com/in/pratham-pachapur-crimzyy",
   github: "https://github.com/Itzz-crimzyy",
   resume: "Pratham_Pachapur_Resume.pdf",
+  resumeHtml: "resume.html",
   photo: "",
   title: 'I build machines that <span class="text-accent">sense, think</span> and move.',
   sub: "First-year Mechatronics student at NMIMS MPSTME, Mumbai. Core Lead on biomimetic robotics, competition mechanism designer for Robocon, and developer of IoT telemetry systems.",
@@ -399,11 +400,12 @@ $("#links").innerHTML = li; $("#mobile").innerHTML = li;
 $("#burger").onclick = () => $("#mobile").classList.toggle("hidden");
 $("#mobile").onclick = e => { if (e.target.tagName === "A") $("#mobile").classList.add("hidden"); };
 
-// Resume PDF link binding
+// Resume link binding
 (function () {
-  const url = D.resume;
-  ["#resume-btn", "#resume-dl"].forEach(s => { $(s).href = url; $(s).setAttribute("download", "Pratham_Pachapur_Resume.pdf"); });
-  ["#resume-open", "#resume-prev"].forEach(s => { $(s).href = url; });
+  const pdfUrl = D.resume;
+  const htmlUrl = D.resumeHtml || "resume.html";
+  ["#resume-btn", "#resume-dl"].forEach(s => { const el = $(s); if (el) { el.href = pdfUrl; el.setAttribute("download", "Pratham_Pachapur_Resume.pdf"); } });
+  ["#resume-open", "#resume-prev"].forEach(s => { const el = $(s); if (el) { el.href = htmlUrl; } });
 })();
 
 if (D.photo) $("#photo").src = D.photo;
